@@ -27,4 +27,8 @@ Route::get('/stripe-payment', [StripeController::class, 'handleGet']);
 Route::post('/stripe-payment', [StripeController::class, 'handlePost'])->name('stripe.payment');
 
 
+Route::get('/stripe-paymentV2', [StripeController::class, 'handleShow'])->name('stripe-paymentV2-show');
+Route::post('/stripe-paymentV2', [StripeController::class, 'handlePostV2'])->name('stripe.paymentV2');
+
+
 require __DIR__.'/auth.php';
